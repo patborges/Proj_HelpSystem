@@ -1,0 +1,18 @@
+package main;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class main extends JFrame {
+	main(){
+		JLabel heading = new JLabel("Help System Menu");
+        heading.setBounds(340,155,400,40);
+        heading.setFont(new Font("Raleway",Font.BOLD,25));
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new main();
+	}
+
+}

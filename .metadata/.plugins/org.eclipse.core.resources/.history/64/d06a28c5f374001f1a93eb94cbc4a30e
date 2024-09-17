@@ -1,0 +1,30 @@
+package main;
+
+import javax.swing.JFrame;
+
+public class JLogin {
+	
+	private JPanel contentPane;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					JLogin frame = new JLogin();
+					frame.setVisible(true);
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	public JLogin() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBoarder(5, 5, 5, 5));
+		
+		setContentPane(contentPane);
+	}
+}

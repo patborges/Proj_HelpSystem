@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+/home/kali/git/repository2/Proj_HelpSystem/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+1187961903.index
+2143302998.index
+1298930832.index

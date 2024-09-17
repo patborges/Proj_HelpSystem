@@ -1,0 +1,23 @@
+package main;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class main extends JFrame {
+	main(){
+		JLabel heading = new JLabel("Help System Menu");
+        heading.setBounds(340,155,400,40);
+        heading.setFont(new Font("Raleway",Font.BOLD,25));
+        add(heading); // Add the label to the frame
+        
+        setSize(600, 600); // Set the size of the frame
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Set the default close operation
+        setVisible(true); // Make the frame visible
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new main();
+	}
+
+}

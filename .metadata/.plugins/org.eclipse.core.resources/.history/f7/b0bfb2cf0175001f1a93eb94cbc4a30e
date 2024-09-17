@@ -1,0 +1,16 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class solicitation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Frame frame = new JFrame();
+		
+		String panel = JOptionPane.showInputDialog(null, "Ask your questions"
+				+ "\n\n1 - Register"+ "\n2 - Login" + "\n3 - End" + "\n\nChoose your option:", "Solicitations", JOptionPane.PLAIN_MESSAGE);
+	}
+
+}
