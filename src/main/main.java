@@ -1,56 +1,56 @@
 package main;
 
-import java.util.Scanner;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class main {
-
+public class main extends JFrame {
+	
+	main(){
+		JLabel heading = new JLabel("Help System Menu");
+        heading.setBounds(340,155,400,40);
+        heading.setFont(new Font("Raleway",Font.BOLD,25));
+        add(heading); // Add the label to the frame
+        
+        setSize(800, 600); // Set the size of the frame
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Set the default close operation
+        setVisible(true); // Make the frame visible
+        
+        
+        // Register button
+        JButton register = new JButton("Register");
+        register.setBounds(335,270,150,40);
+        register.setForeground(Color.WHITE);
+        register.setBackground(Color.black);
+		register.addActionListener(new ActionListener() {
+		  
+		  @Override public void actionPerformed(ActionEvent e) { new login();
+		  setVisible(false); }
+		  
+		  });
+		 
+        add(register); 
+        
+        
+        // Login button
+        JButton login = new JButton("Login");
+        login.setBounds(565,270,150,40);
+        login.setForeground(Color.WHITE);
+        login.setBackground(Color.black);
+		login.addActionListener(new ActionListener() {
+		  
+		  @Override public void actionPerformed(ActionEvent e) { new login();
+		  setVisible(false); }
+		  
+		  });
+		 
+         add(login); 
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-	int stop = 0;
-	
-	Scanner scan = new Scanner(System.in);
-	
-	
-	SQLite_Connection myConnection = new SQLite_Connection(); 
-	
-	do {
-		System.out.println("                                       ");
-		System.out.println("   #################################   ");
-		System.out.println("  ######   Help System Menu   #######  ");
-		System.out.println("   #################################   ");
-		System.out.println("---------------------------------------");
-		System.out.println("| 1 - Register                        |");
-		System.out.println("| 2 - Login                           |");
-		System.out.println("| 3 - End                             |");
-		System.out.println("---------------------------------------");
-		System.out.println("Choose your option:                    ");
-	
-		int num = scan.nextInt();
-		
-		switch(num) {
-			case 1:
-				System.out.println("Register");
-			break;
-		
-			case 2:
-				System.out.println("Login");
-			break;
-		
-			case 3:
-				stop=1;
-		}
-		
-	} while(stop == 0);
-		scan.close();
+		new main();
 	}
 
-	
-	/*
-	 * public static void graphicInterface() {
-	 * 
-	 * InterfaceGrafica panel = new InterfaceGrafica();
-	 * 
-	 * }
-	 */
 }
